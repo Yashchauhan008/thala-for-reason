@@ -8,22 +8,25 @@ const chack = function(){
 
     var len = data.value.length;
     var temp = len-7;
-    var temp1 = len-temp
     var temp2 = temp*-1
 
     var reasonstr = `${data.value} = ${len}`
     var str1 = `${len} - ${temp} = 7`
-    var str2 = `${len} - ${temp2} = 7`
-    var str3 = `thala for a reason`
+    var str2 = `${len} + ${temp2} = 7`
+    var str3 = `${len} + ${temp2} = 7`
+    var str4 = `thala for a reason`
 
     reason.innerHTML = reasonstr;
-    if(temp>=0){
+    if(temp>0){
         math.innerHTML = str1 ;
     }
-    else{
+    else if(temp<0){
         math.innerHTML = str2 ;
     }
-    result.innerHTML = str3;
+    else{
+        math.innerHTML = str3
+    }
+    result.innerHTML = str4;
 
     video.style.display = "block"
     video.play()
